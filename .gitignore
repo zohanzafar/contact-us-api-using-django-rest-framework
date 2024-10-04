@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Local development settings
+.env
+.venv
+venv/
+env/
+ENV/
+.envrc
+*.env
+
+# Ignore virtual environments
+# In case you're using virtual environments in different directories
+.virtualenv/
+venv/
+virenv/
+
+# Requirements.txt file
+requirements.txt
