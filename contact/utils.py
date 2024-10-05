@@ -1,7 +1,5 @@
-# contact/utils.py
 from django.core.mail import send_mail
 from django.conf import settings
-from decouple import config
 
 def send_contact_email(data):
     subject = f"New Contact Us Message from {data['first_name']} {data['last_name']}"
