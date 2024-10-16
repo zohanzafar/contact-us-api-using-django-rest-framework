@@ -1,8 +1,8 @@
 from django.db import models
 
 class Contact(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
+    subject = models.CharField(max_length=55)
     email = models.EmailField()
     phone = models.CharField(max_length=15)
     message = models.TextField()

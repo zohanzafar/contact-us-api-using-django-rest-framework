@@ -2,10 +2,9 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 def send_contact_email(data):
-    subject = f"New Contact Us Message from {data['first_name']} {data['last_name']}"
+    subject = f"Subject: {data['subject']} - {data['name']}"
     message = (
-        f"First Name: {data['first_name']}\n"
-        f"Last Name: {data['last_name']}\n"
+        f"Name: {data['name']}\n"
         f"Email: {data['email']}\n"
         f"Phone Number: {data['phone']}\n"
         f"Message: {data['message']}\n"

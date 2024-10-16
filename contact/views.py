@@ -6,11 +6,10 @@ from .serializers import ContactSerializer
 from .utils import send_contact_email
 
 @api_view(['POST'])
-@throttle_classes([AnonRateThrottle, UserRateThrottle])
+# @throttle_classes([AnonRateThrottle, UserRateThrottle])
 def contact_us(request):
     serializer = ContactSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save()
         send_contact_email(serializer.validated_data)
         return Response({'message': 'Contact form submitted successfully!'}, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
